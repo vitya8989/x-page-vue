@@ -1,0 +1,76 @@
+.multiselect-clear
+  display: none
+
+.multiselect-caret
+  width: 10px
+  height: 7px
+  background: url('../img/icons/arrow.svg') center/contain no-repeat
+  -webkit-mask-image: none
+  margin-right: 28px
+  transition: 0s
+
+.multiselect
+  border: 2px solid #373334
+  border-radius: 0
+  background: #E5E5E5
+  height: 60px
+  font-weight: 400
+  font-size: 1.6rem
+  line-height: 1.35
+  color: #373334
+  &.is-active
+    box-shadow: none
+  &.is-open
+    border-radius: 0
+    background: #ffffff
+  &.is-disabled
+    background: #E5E5E5
+    opacity: 0.5
+
+.multiselect-single-label,
+.multiselect-placeholder
+  padding-left: 24px
+
+.multiselect-dropdown
+  border: 2px solid #373334
+  border-top: none
+  border-radius: 0
+  transform: translateY(calc(100% + 2px))
+  left: -2px
+  right: -2px
+  max-height: 252px
+  overflow-y: hidden
+  padding: 4px 5px 4px 0
+
+.multiselect-options
+  padding: 16px 0 16px 24px
+  overflow-y: auto
+  &::-webkit-scrollbar
+    width: 5px
+  &::-webkit-scrollbar-thumb
+    background: #373334
+    width: 5px
+
+.multiselect-option
+  margin-bottom: 16px
+  font-weight: 500
+  font-size: 1.6rem
+  line-height: 1.35
+  transition: 0.3s
+  padding: 0
+
+  &.is-pointed
+    background: none
+    color: #9F0023
+  &.is-disabled.is-selected
+    color: #959595
+    background: none
+  &.is-selected
+    background: none
+    color: #373334
+  &.is-pointed.is-selected
+    background: none
+    color: #373334
+  &:last-child
+    margin-bottom: 0
+

@@ -1,0 +1,129 @@
+.dp__main
+
+.dp__input_wrap
+  position: relative
+  height: 60px
+
+.dp__input
+  width: 100%
+  height: 100%
+  padding: 0 46px 0 64px
+  border: 2px solid #373334
+  background: #E5E5E5
+  color: #373334
+  font-weight: 400
+  font-size: 1.6rem
+  line-height: 1.35
+  border-radius: 0
+  &:hover
+    border-color: #373334
+  .dp__main.active &
+    background: #ffffff
+  &.dp__disabled
+    opacity: 0.4
+
+.dp__input_icon,
+.dp__clear_icon
+  position: absolute
+  top: 50%
+  transform: translateY(-50%)
+  display: flex
+  align-items: center
+
+.dp__input_icon
+  left: 24px
+
+.dp__clear_icon
+  pointer-events: none
+  right: 28px
+  .dp__main.active &
+    transform: rotate(180deg) translateY(50%)
+
+.dp__arrow_top
+  display: none
+
+.dp__menu.dp__menu_index
+  z-index: 2
+  width: calc((100% - (100% - 1503px)) / 3 - 33.34px)
+  border-radius: 0
+  border: 2px solid #373334
+  border-top: none
+  transform: translateY(-10px) !important
+  transition: none
+  padding: 20px
+  @media (max-width: 1570px)
+    width: calc(100%  / 3 - 46.67px)
+  @media ($desktop)
+    width: calc(100%  / 2 - 45px)
+  @media ($tablet)
+    width: calc(100%  / 2 - 30px)
+  @media ($mobile)
+    width: calc(100% - 30px)
+
+.slot-icon.this--r180
+  transform: rotate(180deg)
+
+.dp__month_year_row
+  justify-content: space-between
+
+.dp__month_year_select[aria-label="Open years overlay"]
+  display: none
+
+.dp__month_year_select
+  width: 100%
+  font-weight: 700
+  font-size: 1.4rem
+  line-height: 1.43
+  color: #373334
+  text-transform: capitalize
+
+.dp__calendar_header_separator
+  height: 2px
+  background: #373334
+
+.dp__calendar[role="grid"]
+  padding-top: 8px
+
+.dp__calendar_row
+  margin: 0 0 13px
+  &:last-child
+    margin: 0
+
+.dp__calendar_header,
+.dp__calendar_row,
+.dp__calendar
+  width: 100%
+
+.dp__calendar_item,
+.dp__calendar_header_item
+  width: calc(100% / 7)
+  display: flex
+  align-items: center
+  justify-content: center
+
+.dp__calendar_item
+  height: 28px
+
+.dp__calendar_header_item
+  height: 24px
+  font-size: 1.2rem
+  font-weight: 500
+
+.dp__cell_inner
+  border-radius: 50%
+  width: 24px
+  height: 24px
+  font-size: 1.2rem
+  font-weight: 400
+  line-height: 1.33
+  color: #373334
+
+.dp__month_year_row
+  height: 24px
+
+.dp__calendar_wrap
+  margin-top: 16px
+
+.dp__active_date
+  border: 1px solid #373334
+  background: none

@@ -1,0 +1,71 @@
+@import "start/null.sass"
+@import "start/variables.sass"
+
+@mixin font($font_name, $file_name, $weight, $style)
+  @font-face
+    font-family: $font_name
+    font-display: swap
+    src: url("../fonts/#{$file_name}.woff") format("woff"), url("../fonts/#{$file_name}.woff2") format("woff2")
+    font-weight: #{$weight}
+    font-style: #{$style}
+
+@import "fonts.sass"
+
+html
+  font-size: 10px
+
+body
+  font-size: 1.6rem
+  line-height: 1.62
+  font-family: Rubik, sans-serif
+  font-weight: 300
+  color: #373334
+  @media ($tablet3)
+    font-size: 1.4rem
+  &.scroll-lock
+    overflow: hidden
+
+
+.wrapper
+  min-height: 100vh
+  display: flex
+  flex-direction: column
+
+
+.container
+  max-width: 1543px
+  padding: 0 20px
+  margin: 0 auto
+  @media($tablet)
+    padding: 0 15px
+
+.main
+  flex: 1 0 auto
+  background: #E5E5E5
+  padding-top: 216px
+  @media ($desktopBig)
+    padding-top: 156px
+  @media (max-width: 1300px)
+    padding-top: 193px
+  @media ($tablet)
+    padding-top: 84px
+
+
+@import "plugins/datepicker/main.scss"
+@import "plugins/select.scss"
+
+@import "blocks/header.sass"
+@import "blocks/btn.sass"
+@import "blocks/social.sass"
+@import "blocks/news.sass"
+@import "blocks/news_item.sass"
+@import "blocks/arrow.sass"
+@import "blocks/breadcrumbs.sass"
+@import "blocks/pagination.sass"
+@import "blocks/tags.sass"
+@import "blocks/title.sass"
+@import "blocks/footer.sass"
+@import "blocks/detail.sass"
+@import "blocks/detail_form.sass"
+@import "blocks/datepicker.sass"
+@import "blocks/select.sass"
